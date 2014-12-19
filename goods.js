@@ -40,9 +40,9 @@ MYAPP.stooge = {
 
 // BAD EXAMPLE
 // Make a function that assigns event handler functions to an array of nodes the
-wrong way.
+//wrong way.
   // When you click on a node, an alert box is supposed to display the ordinal of the
-node.
+//node.
   // But it always displays the number of nodes instead.
 var add_the_handlers = function(nodes) {
   var i;
