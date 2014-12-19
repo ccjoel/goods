@@ -56,7 +56,7 @@ var add_the_handlers = function(nodes) {
 
 // BETTER EXAMPLE
 // Make a function that assigns event handler functions to an array of nodes the
-right way.
+//right way.
   // When you click on a node, an alert box will display the ordinal of the node.
 var add_the_handlers = function(nodes) {
   var i;
