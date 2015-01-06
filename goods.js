@@ -273,3 +273,24 @@ var constructor = function (spec, my) {
 // apply: call function with array as context
 // bind: creates a call but returns a function to use later, instead of applying
 //the call immediately
+
+-------------------------
+
+// Public objects members
+function Constructor(inits) {
+  this.membername = value;
+}
+Constructor.prototype.membername = value;
+
+// Private object members
+function Constructor(inits) {
+  var that = this;
+  var membername = value;
+  function membername(params) {}
+}
+
+// Privileged functions
+function Constructor(inits) {
+  this.membername = function (params) {};
+}
+
