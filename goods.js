@@ -1,3 +1,8 @@
+// i am not the original author of these. this is just a compilation of random posts
+//and useful fuctions for reference. I only add a couple of code. Will add reference to original article.
+
+// most of this examples are from: http://javascript.crockford.com/ from that guy.
+
 // to add a method to the prototype of an already existing function: [search]
 // Add a method conditionally.
 Function.prototype.method = function(name, func) {
@@ -127,6 +132,46 @@ var seqer = serial_maker();
 seqer.set_prefix = ('Q';)
 seqer.set_seq = (1000);
 var unique = seqer.gensym(); // unique is "Q1000"
+
+/* The way to do it with jQuery - namespacing, not necessarilly information hiding  */
+//from: http://appendto.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
+(function( skillet, $, undefined ) {
+    //Private Property
+    var isHot = true;
+
+    //Public Property
+    skillet.ingredient = "Bacon Strips";
+
+    //Public Method
+    skillet.fry = function() {
+        var oliveOil;
+
+        addItem( "\t\n Butter \n\t" );
+        addItem( oliveOil );
+        console.log( "Frying " + skillet.ingredient );
+    };
+
+    //Private Method
+    function addItem( item ) {
+        if ( item !== undefined ) {
+            console.log( "Adding " + $.trim(item) );
+        }
+    }    
+}( window.skillet = window.skillet || {}, jQuery ));
+
+//Adding New Functionality to the Skillet
+(function( skillet, $, undefined ) {
+    //Private Property
+    var amountOfGrease = "1 Cup";
+
+    //Public Method
+    skillet.toString = function() {
+        console.log( skillet.quantity + " " + 
+                     skillet.ingredient + " & " + 
+                     amountOfGrease + " of Grease" );
+        console.log( isHot ? "Hot" : "Cold" );
+    };    
+}( window.skillet = window.skillet || {}, jQuery ));
 
 
 /*Curry */
