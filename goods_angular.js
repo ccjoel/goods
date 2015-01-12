@@ -61,3 +61,5 @@ function ExampleController($scope) {
     console.log('CTRL: vm.min = %i', vm.min);
     console.log('CTRL: vm.max = %i', vm.max);
 }
+
+// Read more: https://github.com/johnpapa/angularjs-styleguide
